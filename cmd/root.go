@@ -26,7 +26,7 @@ var rootCmd = &cobra.Command{
 // Execute the defined subcommands
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
-		logging.Fatal(err)
+		os.Exit(-1)
 	}
 }
 
