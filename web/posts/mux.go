@@ -8,5 +8,5 @@ var rootMux = chi.NewMux()
 
 // Mount location into router
 func Mount(router *chi.Mux, webRootPath string) {
-	router.Handle(webRootPath, rootMux)
+	router.Mount(webRootPath, rootMux)
 }
