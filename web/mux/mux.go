@@ -2,7 +2,7 @@ package mux
 
 import (
 	"github.com/go-chi/chi"
-	"github.com/jeffguorg/blog.jeffthecoder.space/logging"
+	"github.com/jeffguorg/blog.jeffthecoder.space/internal/logging"
 )
 
 var mux *chi.Mux

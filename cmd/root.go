@@ -5,7 +5,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/jeffguorg/blog.jeffthecoder.space/logging"
+	"github.com/jeffguorg/blog.jeffthecoder.space/internal/logging"
 	"github.com/spf13/cobra"
 )
 

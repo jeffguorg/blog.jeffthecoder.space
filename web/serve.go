@@ -3,7 +3,7 @@ package web
 import (
 	"net/http"
 
-	"github.com/jeffguorg/blog.jeffthecoder.space/logging"
+	"github.com/jeffguorg/blog.jeffthecoder.space/internal/logging"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
 	"github.com/jeffguorg/blog.jeffthecoder.space/web/mux"
