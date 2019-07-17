@@ -32,16 +32,18 @@ func SetupLevel(v string) error {
 }
 
 func Fatal(args ...interface{}) {
-	logger.Fatal(args...)
+	logger.Fatalln(args...)
 }
 
-func Warn(args ...interface{}) {
-	logger.Warn(args...)
-}
-
-func Info(args ...interface{}) {
-	logger.Info(args...)
-}
 func Error(args ...interface{}) {
-	logger.Error(args...)
+	logger.Errorln(args...)
+}
+func Warn(args ...interface{}) {
+	logger.Warnln(args...)
+}
+func Info(args ...interface{}) {
+	logger.Infoln(args...)
+}
+func Debug(args ...interface{}) {
+	logger.Debugln(args...)
 }
