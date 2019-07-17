@@ -12,11 +12,10 @@ var (
 )
 
 var serveCmd = &cobra.Command{
-	Use:   "serve",
+	Use:   "serve [default markdown directory] [markdown directory] ...",
 	Short: "A simple blog daemon based on local git repository",
-	Args:  cobra.NoArgs,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		return web.Serve(*addr, *root, *metrics)
+		return web.Serve(*addr, *root, args, *metrics)
 	},
 }
 

@@ -13,9 +13,9 @@ import (
 )
 
 // Serve starts a webserver and listen to it
-func Serve(addr string, root string, metrics bool) error {
+func Serve(addr string, root string, paths []string, metrics bool) error {
 	logging.Info("Blog root mounted to ", root)
-	posts.Mount(mux.Mux(), root)
+	posts.Mount(mux.Mux(), root, paths)
 
 	if metrics {
 		logging.Info("Blog root mounted to /metrics")
