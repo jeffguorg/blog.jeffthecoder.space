@@ -6,8 +6,9 @@ import (
 )
 
 var (
-	addr *string
-	root *string
+	addr    *string
+	root    *string
+	metrics *bool
 )
 
 var serveCmd = &cobra.Command{
@@ -15,7 +16,7 @@ var serveCmd = &cobra.Command{
 	Short: "A simple blog daemon based on local git repository",
 	Args:  cobra.NoArgs,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		return web.Serve(*addr, *root)
+		return web.Serve(*addr, *root, *metrics)
 	},
 }
 
@@ -25,4 +26,5 @@ func init() {
 
 	addr = serveCmd.Flags().String("addr", ":80", "the address which it will bind to")
 	root = serveCmd.Flags().String("root", "/blog", "web root location.")
+	metrics = serveCmd.Flags().Bool("metrics", false, "mount prometheus metric route")
 }
