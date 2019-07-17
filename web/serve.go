@@ -18,7 +18,7 @@ func Serve(addr string, root string, paths []string, metrics bool) error {
 	posts.Mount(mux.Mux(), root, paths)
 
 	if metrics {
-		logging.Info("Blog root mounted to /metrics")
+		logging.Info("Prometheus metrics mounted to /metrics")
 		mux.Mux().Handle("/metrics", promhttp.Handler())
 	}
 
