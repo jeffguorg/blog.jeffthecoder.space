@@ -10,6 +10,14 @@
   version = "v1.0.0"
 
 [[projects]]
+  digest = "1:1da3a221f0bc090792d3a2a080ff09008427c0e0f0533a4ed6abd8994421da73"
+  name = "github.com/coreos/go-systemd"
+  packages = ["daemon"]
+  pruneopts = "UT"
+  revision = "e64a0ec8b42a61e2a9801dc1d0abe539dea79197"
+  version = "v20"
+
+[[projects]]
   digest = "1:1c70b4d7285f792bd387c1adac08825715147fa210b3d2826ffd2bf56be9455b"
   name = "github.com/go-chi/chi"
   packages = ["."]
@@ -131,6 +139,7 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/coreos/go-systemd/daemon",
     "github.com/go-chi/chi",
     "github.com/prometheus/client_golang/prometheus/promhttp",
     "github.com/sirupsen/logrus",
